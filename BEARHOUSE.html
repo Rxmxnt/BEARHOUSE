@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="th"> 
+<head>
+    <meta charset="UTF-8"> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEARHOUSE</title> 
+    <style> 
+        body { 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #f5f5f5;
+            background-color: #fff1ca;
+        }
+
+        header {
+            background-color: #fff1ca;
+            color: #87532e;
+            padding: 15px 0;
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 95%;
+            margin: 0 30px;
+        }
+
+        header img {
+            vertical-align: middle;
+			margin: 0 30px;
+        }
+
+        nav {
+            padding: 10px 50px;
+            text-align:right;
+			margin: 0px 50px 0px 50px;
+        }
+        nav a {
+            color: #87532e; /* ข้อความสีขาว */
+            text-decoration: none;
+			font-size: 20px;
+            margin: 0 15px;
+            font-weight: bold;
+            padding: 8px 25px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #87532e; /* พื้นหลังเปลี่ยนเป็นสีเบจเมื่อเอาเมาส์ไปชี้ */
+            color: #FFFFFF; /* เปลี่ยนสีข้อความเป็นสีน้ำตาลเข้มเมื่อเอาเมาส์ไปชี้ */
+        }
+
+        .hero-section {
+            background-image: url("469017345_974305931407368_2042455797438924088_nnew.jpg"); /* URL ของภาพพื้นหลัง */
+            background-size: cover;
+            background-position: center;
+            height: 850px;
+            display: flex;
+            justify-content: left;
+            align-items: baseline;
+            color: white;
+            text-align: left;
+            position: relative;
+        }
+		
+		.hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .hero-text {
+            position: relative;
+            z-index: 2;
+			margin-left: 20px;
+			margin-top: 60px;
+			line-height: 5px;
+        }
+		.hero-text h2{
+			font-family: Times New Roman, serif;
+			font-size: 100px;
+            position: relative;
+            z-index: 2;
+			margin-left: 8px;
+			margin-top: 80px;
+        }
+		.hero-text p{
+			font-family: Times New Roman, serif;
+			font-size: 35px;
+            position: relative;
+            z-index: 2;
+			margin-left: 8px;
+			margin-top: 80px;
+			line-height: 55px;
+        }
+        #home {
+            position: relative;
+            height: 400px;
+            text-align: center;
+            color: white;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #home img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        #home div {
+            position: relative;
+            z-index: 1;
+        }
+
+        #menu{
+            background-color: #fff1ca;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+		#menu h2{
+			font-size: 50px;
+            background-color: #fff1ca;
+            color: #87532e;
+            padding: 10px;
+            text-align: center;
+        }
+		
+		 #about, #contact {
+            background-color: #fff1ca;
+            color: #87532e;
+            padding: 20px;
+            text-align: center;
+        }
+		
+
+        /* การจัดรูปแบบเมนู */
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .menu-item {
+            background-color: #87532e; /* พื้นหลังสีเบจอ่อน */
+            border-radius: 10px;
+            padding: 20px;
+            width: 250px;
+            margin: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาเบาๆ ให้กล่องเมนู */
+            transition: transform 0.3s; /* เพิ่มการเคลื่อนไหวเมื่อเอาเมาส์ไปชี้ */
+        }
+        .menu-item:hover {
+            transform: scale(1.05); /* ขยายขนาดเมื่อเอาเมาส์ไปชี้ */
+        }
+        .menu-item img {
+            width: 100%;
+			height: auto;
+			display: block;
+			margin-bottom: 10px;
+            border-radius: 8px; /* มุมโค้งมนของรูปภาพ */
+        }
+        /* ส่วนท้ายของหน้าเว็บ */
+        footer {
+            background-color: #87532e; /* พื้นหลังสีน้ำตาลเข้ม */
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <img src="bearhouse.webp" width="15%" height="15%" alt="โลโก้คาเฟ่">
+            <h1>BEARHOUSE</h1>
+        	<nav align="right">
+        		<a href="#menu" text-align="left">เมนู</a>
+        		<a href="#about" text-align="left">เกี่ยวกับเรา</a>
+        		<a href="#contact" text-align="left">ติดต่อเรา</a>
+    		</nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h2>NEW PACKAGING</h2>
+            <p>พบกับแพ็กเกจจิงลายคริสต์มาสสุดน่ารัก 🎅🎀<br> ImagineYourHappiness<br>
+ สุขทุกความอร่อย<br></p>
+        </div>
+    </div>
+	
+	<!-- ส่วนของเมนูยอดนิยม -->
+    <section id="menu">
+        <h2>MENU</h2>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="Jasmine Soft Green Tea.jpg" alt="JASMINE SOFT GREEN TEA">
+                <h3>ชาฟองมะลิ</h3>
+                <p>JASMINE SOFT GREEN TEA</p>
+				<p>S 50 / M 65</p>
+            </div>
+            <div class="menu-item">
+                <img src="Peach Soft Tea.jpg" alt="PEACH SOFT TEA">
+                <h3>ชาฟองเนื้อพีช</h3>
+                <p>PEACH SOFT TEA</p>
+				<p>S 80 / M 95</p>
+            </div>
+            <div class="menu-item">
+                <img src="Yuzu Butterfly Pea Honey Konjac Jelly.jpg" alt="YUZU BUTTERFLY PEA HONEY KONJAC JELLY">
+                <h3>อัญชันยูซุหนึบน้ำผึ้ง</h3>
+                <p>YUZU BUTTERFLY PEA HONEY KONJAC JELLY</p>
+				<p>S 85 / M 100</p>
+            </div>
+			<div class="menu-item">
+                <img src="Strawberry Soft Tea.jpg" alt="STRAWBERRY SOFT TEA">
+                <h3>ชาฟองสตรอว์เบอร์รี</h3>
+                <p>STRAWBERRY SOFT TEA</p>
+				<p>S 80 / M 95</p>
+            </div>
+			<div class="menu-item">
+                <img src="Honey Lemon Soft Tea.jpg" alt="HONEY LEMON SOFT TEA">
+                <h3>ชาฟองฮันนี่เลมอน</h3>
+                <p>HONEY LEMON SOFT TEA</p>
+				<p>S 80 / M 95</p>
+            </div>
+			<div class="menu-item">
+                <img src="Passion fruit Soft Tea.jpg" alt="PASSION FRUIT SOFT TEA">
+                <h3>ชาฟองเสาวรส</h3>
+                <p>PASSION FRUIT SOFT TEA</p>
+				<p>S 80 / M 95</p>
+            </div>
+			<div class="menu-item">
+                <img src="Yuzu Black Tea.jpg" alt="YUZU BLACK TEA">
+                <h3>ชาดำยูซุ</h3>
+                <p>YUZU BLACK TEA</p>
+				<p>S 80 / M 95</p>
+            </div>
+            <div class="menu-item">
+                <img src="Assam Milk Tea.jpg" alt="ASSAM MILK TEA">
+                <h3>ชานมอัสสัม</h3>
+                <p>ASSAM MILK TEA</p>
+				<p>S 65 / M 80</p>
+            </div>
+            <div class="menu-item">
+                <img src="Brown Sugar Milk.jpg" alt="BROWN SUGAR MILK">
+                <h3>นมน้ำตาลแดง</h3>
+                <p>BROWN SUGAR MILK</p>
+				<p>S 80 / M 95</p>
+            </div>
+			<div class="menu-item">
+                <img src="Chocolate Latte.jpg" alt="CHOCOLATE LATTE">
+                <h3>ช็อกโกแลตลาเต้</h3>
+                <p>CHOCOLATE LATTE</p>
+				<p>S 65 / M 80</p>
+            </div>
+			<div class="menu-item">
+                <img src="Classic Thai Milk Tea.jpg" alt="CLASSIC THAI MILK TEA">
+                <h3>ชาไทยคลาสสิก</h3>
+                <p>CLASSIC THAI MILK TEA</p>
+				<p>S 80 / M 95</p>
+            </div>
+			<div class="menu-item">
+                <img src="Coffee Latte.jpg" alt="COFFEE LATTE">
+                <h3>คอฟฟี่ลาเต้</h3>
+                <p>COFFEE LATTE</p>
+				<p>S 80 / M 95</p>
+            </div>
+			
+			<div class="menu-item">
+                <img src="Genmaicha Latte.jpg" alt="GENMAICHA LATTE">
+                <h3>เก็นไมฉะ</h3>
+                <p>GENMAICHA LATTE</p>
+				<p>S 80 / M 100</p>
+            </div>
+            <div class="menu-item">
+                <img src="MATCHA LATTE.jpg" alt="MATCHA LATTE">
+                <h3>มัทฉะ</h3>
+                <p>MATCHA LATTE</p>
+				<p>S 90 / M 105</p>
+            </div>
+            <div class="menu-item">
+                <img src="HOT ASSAM MILK TEA.jpg" alt="HOT ASSAM MILK TEA">
+                <h3>ชานมอัสสัมร้อน</h3>
+                <p>HOT ASSAM MILK TEA</p>
+				<p>80</p>
+            </div>
+			<div class="menu-item">
+                <img src="HOT BROWN SUGAR MILK.jpg" alt="HOT BROWN SUGAR MILK">
+                <h3>นมบราวน์ร้อน</h3>
+                <p>HOT BROWN SUGAR MILK</p>
+				<p>95</p>
+            </div>
+			<div class="menu-item">
+                <img src="HOT CHOCOLATE LATTE.jpg" alt="HOT CHOCOLATE LATTE">
+                <h3>ช็อกโกแลตลาเต้ร้อน</h3>
+                <p>HOT CHOCOLATE LATTE</p>
+				<p>80</p>
+            </div>
+			<div class="menu-item">
+                <img src="Yuzu Black Tea Frappe.jpg" alt="YUZU BLACK TEA FRAPPE">
+                <h3>ชาดำยุซุปั่น</h3>
+                <p>YUZU BLACK TEA FRAPPE</p>
+				<p>M 140</p>
+            </div>
+			<div class="menu-item">
+                <img src="Assam Milk Tea Frappe.jpg" alt="ASSAM MILK TEA FRAPPE">
+                <h3>ชานมปั่น</h3>
+                <p>ASSAM MILK TEA FRAPPE</p>
+				<p>M 140</p>
+            </div>
+			<div class="menu-item">
+                <img src="Chocolate marshmallow cake.jpg" alt="CHOCOLATE MARSHMALLOW CAKE">
+                <h3>เค้กช็อกโกแลตกุ้มกั้มมาร์ชแมลโลว์</h3>
+                <p>CHOCOLATE MARSHMALLOW CAKE</p>
+				<p>130</p>
+            </div>
+			<div class="menu-item">
+                <img src="Taro Coconut Pie.jpg" alt="TARO COCONUT PIE">
+                <h3>พายเผือกหนึบบ้าบิ่นมะพร้าวอ่อน</h3>
+                <p>TARO COCONUT PIE</p>
+				<p>130</p>
+            </div>
+			<div class="menu-item">
+                <img src="Dream Mochi.jpg" alt="DREAM MOCHI">
+                <h3>เหมือนฝัน</h3>
+                <p>DREAM MOCHI</p>
+				<p>120</p>
+            </div>
+			<div class="menu-item">
+                <img src="Honkkaido Milk Mochi Roll.jpg" alt="HONKKAIDO MILK MOCHI ROLL">
+                <h3>โมจิโรลนมฮอกไกโด</h3>
+                <p>HONKKAIDO MILK MOCHI ROLL</p>
+				<p>120</p>
+            </div>
+			<div class="menu-item">
+                <img src="CHOCOLATE MOCHI ROLL.jpg" alt="CHOCOLATE MOCHI ROLL">
+                <h3>โมจิโรลช็อกโกแลต</h3>
+                <p>CHOCOLATE MOCHI ROLL</p>
+				<p>120</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div>
+            <h2>เกี่ยวกับเรา</h2>
+            <p>“ร้านชานม theme บ้านหมี ที่เริ่มต้นมาจากความหลงใหลในชานมไช่มุกของ youtuber Bear Hug “ซาน–ปัทมพร ปรีชาวุฒิเดช” และ “กานต์-อรรถกร รัตนารมย์”<br> ถึงขั้นไปเรียนรู้การทำไข่มุกสูตรต้นตำรับไต้หวันแท้ๆ จนได้เป็นไข่มุก homemade สูตรพิเศษที่ปั้นกันสดๆ ภายในร้าน<br>โดดเด่นด้วยการให้ความสำคัญกับความสดใหม่ของวัตถุดิบ ไม่ใช้วัตถุกันเสีย และเน้นการนำเสนอประสบการณ์ดื่มชาที่สนุกและน่ารัก<br>สอดคล้องกับภาพลักษณ์ของแบรนด์ที่มีความสดใสและเป็นกันเอง<br></p>
+        </div>
+    </section>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div>
+            <h2>ติดต่อเรา</h2>
+			<p><img src="openlink.png" width="3%" height="3%" alt="OPENLINK"><a href="https://www.openlink.co/bearhouse">OPENLINK</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <p>&copy; 2024 BEARHOUSE. สงวนสิทธิ์ทุกประการ.</p>
+			<p>จัดทำโดย นางสาววรากร ห้วยหงษ์ทอง</p>
+        </div>
+    </footer>
+</body>
+</html>
